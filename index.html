@@ -12,12 +12,28 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-wrapper {
+        flex: 1;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"> Sistem Inventaris </a>
+        <a class="navbar-brand" href="#">Sistem Inventaris</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,114 +45,117 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html"> Dashboard </a>
+              <a class="nav-link active" href="index.html">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="data-barang.html"> Data Barang </a>
+              <a class="nav-link" href="data-barang.html">Data Barang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tambah-barang.html"> Tambah Barang </a>
+              <a class="nav-link" href="tambah-barang.html">Tambah Barang</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-      <div class="row mb-4">
-        <div class="col-12">
-          <h2 class="mb-3">Dashboard Inventaris</h2>
-          <p class="text-muted">
-            Ringkasan informasi barang dalam sistem inventaris
-          </p>
-        </div>
-      </div>
-
-      <!-- Cards Grid -->
-      <div class="row g-4">
-        <!-- Total Barang Card -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="mb-3">
-                <i class="fas fa-boxes fa-3x text-primary"></i>
-              </div>
-              <h5 class="card-title">Total Barang</h5>
-              <h2 class="text-primary mb-3">150</h2>
-              <p class="card-text text-muted">
-                Jumlah keseluruhan barang yang terdaftar dalam sistem inventaris
-              </p>
-              <a href="data-barang.html" class="btn btn-primary">
-                <i class="fas fa-eye me-1"></i>Lihat Detail
-              </a>
-            </div>
+    <!-- Konten Utama -->
+    <div class="content-wrapper">
+      <div class="container mt-4">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="mb-3">Dashboard Inventaris</h2>
+            <p class="text-muted">
+              Ringkasan informasi barang dalam sistem inventaris
+            </p>
           </div>
         </div>
 
-        <!-- Barang Aktif Card -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="mb-3">
-                <i class="fas fa-check-circle fa-3x text-success"></i>
-              </div>
-              <h5 class="card-title">Barang Aktif</h5>
-              <h2 class="text-success mb-3">125</h2>
-              <p class="card-text text-muted">
-                Jumlah barang dalam kondisi baik, siap digunakan dan dikirimkan
-              </p>
-              <a href="data-barang.html" class="btn btn-success">
-                <i class="fas fa-eye me-1"></i>Lihat Detail
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Barang Rusak Card -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
-              <div class="mb-3">
-                <i class="fas fa-exclamation-triangle fa-3x text-danger"></i>
-              </div>
-              <h5 class="card-title">Barang Rusak</h5>
-              <h2 class="text-danger mb-3">25</h2>
-              <p class="card-text text-muted">
-                Jumlah barang yang mengalami kerusakan dan perlu perbaikan
-              </p>
-              <a href="data-barang.html" class="btn btn-danger">
-                <i class="fas fa-eye me-1"></i>Lihat Detail
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Actions -->
-      <div class="row mt-5">
-        <div class="col-12">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <i class="fas fa-bolt me-2"></i>Aksi Cepat
-              </h5>
-              <div class="d-flex flex-wrap gap-2">
-                <a href="tambah-barang.html" class="btn btn-primary">
-                  <i class="fas fa-plus me-1"></i>Tambah Barang Baru
+        <!-- Cards -->
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fas fa-boxes fa-3x text-primary"></i>
+                </div>
+                <h5 class="card-title">Total Barang</h5>
+                <h2 class="text-primary mb-3">150</h2>
+                <p class="card-text text-muted">
+                  Jumlah keseluruhan barang yang terdaftar dalam sistem
+                  inventaris
+                </p>
+                <a href="data-barang.html" class="btn btn-primary">
+                  <i class="fas fa-eye me-1"></i>Lihat Detail
                 </a>
-                <a href="data-barang.html" class="btn btn-outline-dark">
-                  <i class="fas fa-search me-1"></i>Cari Barang
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fas fa-check-circle fa-3x text-success"></i>
+                </div>
+                <h5 class="card-title">Barang Aktif</h5>
+                <h2 class="text-success mb-3">125</h2>
+                <p class="card-text text-muted">
+                  Jumlah barang dalam kondisi baik, siap digunakan dan
+                  dikirimkan
+                </p>
+                <a href="data-barang.html" class="btn btn-success">
+                  <i class="fas fa-eye me-1"></i>Lihat Detail
                 </a>
-                <button class="btn btn-outline-success">
-                  <i class="fas fa-download me-1"></i>Export Data
-                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fas fa-exclamation-triangle fa-3x text-danger"></i>
+                </div>
+                <h5 class="card-title">Barang Rusak</h5>
+                <h2 class="text-danger mb-3">25</h2>
+                <p class="card-text text-muted">
+                  Jumlah barang yang mengalami kerusakan dan perlu perbaikan
+                </p>
+                <a href="data-barang.html" class="btn btn-danger">
+                  <i class="fas fa-eye me-1"></i>Lihat Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aksi Cepat -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">
+                  <i class="fas fa-bolt me-2"></i>Aksi Cepat
+                </h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="tambah-barang.html" class="btn btn-primary">
+                    <i class="fas fa-plus me-1"></i>Tambah Barang Baru
+                  </a>
+                  <a href="data-barang.html" class="btn btn-outline-dark">
+                    <i class="fas fa-search me-1"></i>Cari Barang
+                  </a>
+                  <button class="btn btn-outline-success">
+                    <i class="fas fa-download me-1"></i>Export Data
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- /container -->
     </div>
+    <!-- /content-wrapper -->
 
     <!-- Footer -->
     <footer class="bg-light mt-5 py-4">
